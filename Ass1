@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	struct Student
+	{
+		int id;
+		char name[10];
+		struct Date
+		{
+			int dd;
+			int mm;
+			int yy;
+		}dob; 
+		float per;
+	};
+
+	struct Student s1;
+	s1.id=101;
+	strcpy(s1.name,"Sairam");
+	s1.dob.dd=3;
+	s1.dob.mm=8;
+	s1.dob.yy=2000;
+	s1.per=98;
+	printf("\nStudent id:%d\nStudent Name:%s\nStudent DOB:%d-%d-%d\nStudent percentge:%f",
+	         s1.id,s1.name,s1.dob.dd,s1.dob.mm,s1.dob.yy, s1.per);
+}
